@@ -6,33 +6,45 @@ export const heroStyle = css`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #61dafb;
+  background: linear-gradient(135deg, #a2d2ff, #cdb4db); /* 부드러운 파스텔 블루-보라 */
+  text-align: center;
   color: white;
-`;
+  padding: 0 20px;
 
-export const contactInfo = css`
-  margin-top: 30px;
-  font-size: 1rem;
-  text-align: start;
+  h1 {
+    font-size: 40px; /* px 단위 */
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 20px; /* px 단위 */
+    margin-bottom: 12px;
+  }
 
   a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
+    margin: 0 10px;
+    transition: color 0.3s;
 
     &:hover {
-      color: #ddd;
+      color: #cdb4db; /* 호버 시 보라색 강조 */
     }
   }
-`;
 
-export const linkStyle = css`
+  .linkStyle {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 
-  text-align: center;
-  & a{
+    svg {
+      transition: transform 0.3s;
 
-    &:nth-of-type(1) {
-      margin-right: 10px;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 `;

@@ -5,6 +5,10 @@ export const sectionStyle = css`
     background: #f5f5f5;
     text-align: center;
 
+    & p {
+        font-size: 19px;
+    }
+
     & a {
         text-decoration: none;
         &:nth-of-type(1) {
@@ -24,11 +28,11 @@ export const sliderStyle = css`
     .slick-prev,
     .slick-next {
         position: absolute;
-        top: 50%;
+        top: 45%;
         transform: translateY(-50%);
         z-index: 10;
-        background: #a6e1f1; 
-        color: white; /* 화살표 색상 */
+        background: #b0b0b0; /* 단색: 중간 회색 */
+        color: white; /* 화살표 아이콘 색상 */
         border-radius: 50%;
         width: 40px;
         height: 40px;
@@ -41,16 +45,16 @@ export const sliderStyle = css`
     }
 
     .slick-prev {
-        left: 500px; /* 왼쪽 화살표를 더 가깝게 배치 */
+        left: 500px; /* 왼쪽 화살표 위치 조정 */
     }
 
     .slick-next {
-        right: 500px; /* 오른쪽 화살표를 더 가깝게 배치 */
+        right: 500px; /* 오른쪽 화살표 위치 조정 */
     }
 
     .slick-prev:hover,
     .slick-next:hover {
-        background: #53C7E8; /* 호버 시 배경을 더 진하게 */
+        background: #7a7a7a; /* 호버 시 색상: 어두운 회색 */
     }
 
     .slick-dots li button:before {
