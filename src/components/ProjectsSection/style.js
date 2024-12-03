@@ -1,38 +1,53 @@
 import { css } from "@emotion/react";
 
 export const sectionStyle = css`
-    padding: 50px;
-    background: #f5f5f5;
+    padding: 80px 20px;
     text-align: center;
 
-    & p {
-        font-size: 19px;
+    h1 {
+        font-size: 32px; /* 큰 헤더 폰트 */
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333; /* 어두운 텍스트 색상 */
     }
 
-    & a {
+    p {
+        font-size: 18px;
+        color: #555;
+    }
+
+    a {
         text-decoration: none;
+        font-size: 16px;
+        color: #007bff;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #0056b3;
+        }
         &:nth-of-type(1) {
-            margin-right: 20px;
+            padding-right: 30px;
         }
     }
 `;
 
 export const sliderStyle = css`
-    .slick-slide {
+    .swiper {
+        width: 100%;
+        max-width: 1200px; /* 슬라이더 최대 너비 */
+        margin: 0 auto;
+    }
+
+    .swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
-        outline: none; // 클릭 시 파란색 테두리 제거
     }
 
-    .slick-prev,
-    .slick-next {
-        position: absolute;
-        top: 45%;
-        transform: translateY(-50%);
-        z-index: 10;
-        background: #b0b0b0; /* 단색: 중간 회색 */
-        color: white; /* 화살표 아이콘 색상 */
+    .swiper-button-prev,
+    .swiper-button-next {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
         border-radius: 50%;
         width: 40px;
         height: 40px;
@@ -40,41 +55,56 @@ export const sliderStyle = css`
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        border: none;
-        outline: none;
+        transition: background 0.3s ease;
+    }
+    .swiper-button-prev {
+        left: 300px; /* 이미지와 더 가까워지도록 조정 */
     }
 
-    .slick-prev {
-        left: 500px; /* 왼쪽 화살표 위치 조정 */
+    /* 다음 버튼 */
+    .swiper-button-next {
+        right: 300px; /* 이미지와 더 가까워지도록 조정 */
     }
 
-    .slick-next {
-        right: 500px; /* 오른쪽 화살표 위치 조정 */
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        background: rgba(0, 0, 0, 0.8);
     }
 
-    .slick-prev:hover,
-    .slick-next:hover {
-        background: #7a7a7a; /* 호버 시 색상: 어두운 회색 */
+    .swiper-pagination-bullet {
+        background: #ccc;
+        width: 10px;
+        height: 10px;
+        opacity: 1;
     }
 
-    .slick-dots li button:before {
-        color: #ccc; /* 기본 네비게이션 점 색상 */
-    }
-
-    .slick-dots li.slick-active button:before {
-        color: #333; /* 활성화된 점 색상 */
+    .swiper-pagination-bullet-active {
+        background: #007bff;
     }
 `;
 
 export const projectCardStyle = css`
     text-align: center;
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px;
+    max-width: 800px; /* 카드 최대 너비 */
+
+    p {
+        font-size: 16px;
+        color: #555;
+        margin-top: 10px;
+    }
 `;
 
 export const projectImageStyle = css`
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* 이미지의 너비를 부모 요소에 맞춤 */
+    width: 750px; /* 최대 크기 제한 */
+    height: auto; /* 비율 유지 */
+    border-radius: 8px; /* 부드러운 모서리 */
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.2); /* 호버 시 확대 효과 */
+    }
 `;
