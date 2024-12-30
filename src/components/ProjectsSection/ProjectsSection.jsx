@@ -72,7 +72,7 @@ function ProjectsSection(props) {
                     <a href="https://github.com/AnotherStarbucksOrder" target="_blank" rel="noopener noreferrer">
                         GitHub
                     </a>
-                    <a href="https://www.notion.so/10a3aa96ee0d80269b5ac2f89ac83ee7?pvs=4" target="_blank" rel="noopener noreferrer">
+                    <a href="https://same-catshark-9c4.notion.site/10a3aa96ee0d80269b5ac2f89ac83ee7" target="_blank" rel="noopener noreferrer">
                         Notion
                     </a>
                 </p>
