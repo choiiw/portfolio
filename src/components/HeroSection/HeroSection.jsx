@@ -19,7 +19,7 @@ function HeroSection() {
                     setInView(false); // 다시 나가면 상태를 false로 설정
                 }
             },
-            { threshold: 0.3 } // 30% 이상 화면에 들어오면 실행
+            { threshold: 0.1 } // 30% 이상 화면에 들어오면 실행
         );
 
         if (currentSection) {

@@ -24,7 +24,7 @@ function ProjectsSection(props) {
                     setInView(false);
                 }
             },
-            { threshold: 0.3 }
+            { threshold: 0 }
         );
 
         if (currentSection) {

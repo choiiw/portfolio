@@ -6,7 +6,7 @@ export const heroStyle = css`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #a2d2ff, #cdb4db); /* 부드러운 파스텔 블루-보라 */
+  background: linear-gradient(180deg, #a2d2ff, #cdb4db); /* 부드러운 파스텔 블루-보라 */
   text-align: center;
   color: white;
   padding: 0 20px;

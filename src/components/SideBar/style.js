@@ -60,3 +60,8 @@ export const linkStyle = css`
         }
     }
 `;
+export const activeLinkStyle = css`
+    font-weight: bold; /* 강조 */
+    color: #007bff; /* 활성화된 섹션의 링크 색상 */
+    border-left: 3px solid #007bff; /* 좌측 강조선 */
+`;

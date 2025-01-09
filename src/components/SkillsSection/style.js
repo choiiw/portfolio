@@ -1,47 +1,82 @@
-import { css, keyframes } from "@emotion/react";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 
-// 애니메이션 정의
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+export const sectionStyle = css`
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #cdb4db, #d9c2e9); /* 배경색 */
 `;
 
-// Skills 섹션 스타일
-export const sectionStyle = css`
-  padding: 60px 20px;
-  background-color: #ffffff;
-  text-align: center;
+export const titleStyle = css`
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 5px;
+`;
 
-  h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    animation: ${fadeIn} 1s ease-in-out; /* 애니메이션 추가 */
-  }
+export const gridStyle = css`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
 `;
 
 export const skillCategory = css`
-  margin: 20px 0;
   padding: 20px;
-  border: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.2); /* 반투명 배경 */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* 유리 효과 테두리 */
   border-radius: 10px;
-  background: #f9f9f9;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: ${fadeIn} 1.5s ease-in-out; /* 애니메이션 추가 */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 그림자 */
+  backdrop-filter: blur(10px); /* 유리 효과 */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 
-  h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    animation: ${fadeIn} 1.2s ease-in-out; /* 각 요소에 다른 딜레이 */
+  &:hover {
+    transform: scale(1.05); /* 살짝 확대 */
+    background-color: rgba(255, 255, 255, 0.3); /* 호버 시 밝아짐 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* 그림자 강조 */
   }
 
-  p {
-    font-size: 16px;
-    animation: ${fadeIn} 1.4s ease-in-out;
+  h3 {
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  ul li span {
+    color: #555;
+    transition: color 0.3s ease;
+
+    &:hover {
+      font-weight: bold;
+      color: #007bff; /* 스킬 이름 강조 */
+    }
+  }
+`;
+
+export const skillItem = css`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  margin: 10px 0;
+
+  svg {
+    font-size: 1.5rem;
+    color: #007bff; /* 아이콘 색상 */
+  }
+
+  span {
+    font-size: 1rem;
+    color: #555;
+  }
+`;
+
+export const hoverEffect = css`
+  &:hover {
+    font-weight: bold;
   }
 `;

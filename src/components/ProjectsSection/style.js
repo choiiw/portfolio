@@ -3,23 +3,23 @@ import { css } from "@emotion/react";
 export const sectionStyle = css`
     padding: 80px 20px;
     text-align: center;
-
+    background: linear-gradient(180deg, #d9c2e9, #a2d2ff);
     h1 {
         font-size: 32px; /* 큰 헤더 폰트 */
         font-weight: bold;
         margin-bottom: 20px;
-        color: #333; /* 어두운 텍스트 색상 */
+        color: #fff; /* 어두운 텍스트 색상 */
     }
 
     p {
         font-size: 18px;
-        color: #555;
+        color: #fff;
     }
 
     a {
         text-decoration: none;
         font-size: 16px;
-        color: #007bff;
+        color: #fff;
         transition: color 0.3s ease;
 
         &:hover {
@@ -46,7 +46,6 @@ export const sliderStyle = css`
 
     .swiper-button-prev,
     .swiper-button-next {
-        background: rgba(0, 0, 0, 0.5);
         color: white;
         border-radius: 50%;
         width: 40px;
@@ -69,7 +68,7 @@ export const sliderStyle = css`
 
     .swiper-button-prev:hover,
     .swiper-button-next:hover {
-        background: rgba(0, 0, 0, 0.8);
+        color: #0056b3;
     }
 
     .swiper-pagination-bullet {
